@@ -1,6 +1,6 @@
 # @near-kit-tool-box
 
-A monorepo containing three packages for NEAR Kit development:
+A monorepo containing three packages for NEAR development:
 
 - **@near-kit-tool-box/web** - Browser-specific NEAR KIT client setup with Hot Wallet Connect
 - **@near-kit-tool-box/env** - Backend/environment NEAR KIT client setup with .env support
