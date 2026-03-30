@@ -34,7 +34,6 @@
     "typescript": "^6.0.2"
   },
   "dependencies": {
-    "@near-kit-tool-box/fun": "0.0.1",
     "@sleet-js/ft-methods-const": "^0.0.5",
     "@sleet-js/ref-exchange-methods-const": "^0.0.3",
     "@sleet-js/wrap-near-contract-methods-const": "^0.0.1",
