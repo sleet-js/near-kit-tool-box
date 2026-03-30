@@ -10,6 +10,7 @@ A monorepo containing three packages for NEAR Kit development:
 
 ```bash
 bun install
+bun update --latest
 bun run build
 ```
 
