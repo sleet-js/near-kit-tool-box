@@ -2,8 +2,8 @@
 
 A monorepo containing three packages for NEAR Kit development:
 
-- **@near-kit-tool-box/web** - Browser-specific NEAR client setup with Hot Wallet Connect
-- **@near-kit-tool-box/env** - Backend/environment NEAR client setup with .env support
+- **@near-kit-tool-box/web** - Browser-specific NEAR KIT client setup with Hot Wallet Connect
+- **@near-kit-tool-box/env** - Backend/environment NEAR KIT client setup with .env support
 - **@near-kit-tool-box/fun** - Reusable contract functions for common NEAR contracts
 
 ## Quick Start

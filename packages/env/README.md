@@ -1,6 +1,6 @@
 # @near-kit-tool-box/env
 
-Backend/environment NEAR client setup with `.env` file support.
+Backend/environment NEAR KIT client setup with `.env` file support.
 
 ## Installation
 
@@ -37,7 +37,7 @@ export env_privateKey=ed25519:your-private-key
 ## Features
 
 - Environment variable configuration
-- Backend/script-friendly NEAR client
+- Backend/script-friendly NEAR KIT client
 - Contract constants for env environment
 
 copyright 2026 by sleet.near

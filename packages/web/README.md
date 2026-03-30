@@ -1,6 +1,6 @@
 # @near-kit-tool-box/web
 
-Browser-specific NEAR client setup with Hot Wallet Connect support.
+Browser-specific NEAR KIT client setup with Hot Wallet Connect support.
 
 ## Installation
 
