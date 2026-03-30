@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "@hot-labs/near-connect": "0.11.1",
+    "@near-kit-tool-box/fun": "0.0.1",
     "@sleet-js/ft-methods-const": "^0.0.5",
     "@sleet-js/ref-exchange-methods-const": "^0.0.3",
     "@sleet-js/wrap-near-contract-methods-const": "^0.0.1",

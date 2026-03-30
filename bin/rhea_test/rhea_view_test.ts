@@ -1,7 +1,7 @@
 import {
   near_kit_env,
   rhea_contractId_for_network_env,
-} from "@near-kit-tool-box/env";
+} from "../../packages/env/src/index.js";
 import {
   ref_get_number_of_pools_function,
   ref_get_pool_function,
@@ -9,7 +9,7 @@ import {
   ref_get_deposits_function,
   ref_get_return_function,
   ref_storage_balance_of_function,
-} from "@near-kit-tool-box/fun";
+} from "../../packages/fun/src/index.js";
 // ==============================================
 console.log("==============================================");
 console.log(

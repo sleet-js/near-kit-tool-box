@@ -2,14 +2,14 @@ import {
   near_kit_env,
   rhea_contractId_for_network_env,
   wrap_contractId_for_network_env,
-} from "@near-kit-tool-box/env";
-import type { AmountInput } from "@near-kit-tool-box/fun";
+} from "../../packages/env/src/index.js";
+import type { AmountInput } from "../../packages/fun/src/index.js";
 import {
   wrap_near_deposit_fun,
   ft_transfer_call_fun,
   ref_swap_function,
-} from "@near-kit-tool-box/fun";
-import type { ref_swap_action_type } from "@near-kit-tool-box/fun";
+} from "../../packages/fun/src/index.js";
+import type { ref_swap_action_type } from "../../packages/fun/src/index.js";
 // ==============================================
 // complete flow
 // 1. wrap NEAR
