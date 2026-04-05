@@ -36,6 +36,12 @@ export {
   wrap_near_withdraw_fun,
 } from "./fun/near/wrap_near";
 // ===========================================
+// pool fun
+export {
+  pool_get_number_of_accounts_fun,
+  pool_ping_fun,
+} from "./fun/pool/pool_fun";
+// ===========================================
 // Types
 export type { AmountInput } from "./types/AmountInput";
 export type { greeting_args_params_interface } from "./lib/contract_greeting_args";

@@ -17,6 +17,7 @@ bun run build
 ## Packages
 
 ### @near-kit-tool-box/web
+
 Browser client with Hot Wallet Connect and localStorage network switching.
 
 ```js
@@ -33,6 +34,7 @@ import {
 ```
 
 ### @near-kit-tool-box/env
+
 Backend client with environment variable configuration.
 
 ```js
@@ -46,6 +48,7 @@ import {
 ```
 
 ### @near-kit-tool-box/fun
+
 Contract functions (greeting, Rhea/Ref, FT, wrapNEAR).
 
 ```js
@@ -113,7 +116,11 @@ const greeting = await greeting_get_greeting_fun(near, "hello.sleet.near");
 import { near_kit_env } from "@near-kit-tool-box/env";
 import { ft_balance_of_fun } from "@near-kit-tool-box/fun";
 
-const balance = await ft_balance_of_fun(near_kit_env, "token.near", "account.near");
+const balance = await ft_balance_of_fun(
+  near_kit_env,
+  "token.near",
+  "account.near",
+);
 ```
 
 copyright 2026 by sleet.near

@@ -18,15 +18,10 @@ export async function pool_get_number_of_accounts_fun(
   return result as number;
 }
 // ===========================================
-export async function pool_ping_fun(
-  near: Near,
-  pool_contractId: string,
-) {
-  const result = await near.call(
-    pool_contractId,
-    pool_methods_const.ping,
-    { gas: "30 Tgas" },
-  );
+export async function pool_ping_fun(near: Near, pool_contractId: string) {
+  const result = await near.call(pool_contractId, pool_methods_const.ping, {
+    gas: "30 Tgas",
+  });
   return result as FinalExecutionOutcome;
 }
 // ===========================================
