@@ -37,6 +37,7 @@
     "@hot-labs/near-connect": "0.11.1",
     "@sleet-js/ft-methods-const": "^0.0.5",
     "@sleet-js/ref-exchange-methods-const": "^0.0.3",
+    "@sleet-js/staking-pool-contract-methods-const": "^0.0.1",
     "@sleet-js/wrap-near-contract-methods-const": "^0.0.1",
     "near-kit": "^0.12.0",
     "prettier": "^3.8.1",
