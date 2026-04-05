@@ -9,6 +9,7 @@ near-kit-tool-box/
 │   ├── env/        # Backend client (.env configuration)
 │   └── fun/        # Reusable contract functions
 ├── bin/            # CLI test scripts
+├── scripts/        # Development utilities (version sync)
 └── package.json    # Root workspace config
 ```
 
@@ -46,6 +47,63 @@ bun run build:fun
 cd packages/web && bun run tsc --noEmit
 cd packages/env && bun run tsc --noEmit
 cd packages/fun && bun run tsc --noEmit
+```
+
+---
+
+## Version Synchronization
+
+Keep all packages at the same version with the version sync utility.
+
+### Check Version Status (Dry Run)
+```bash
+# See which packages need version updates (no files modified)
+bun run version:dry-run
+```
+
+### Sync All Package Versions
+```bash
+# Patch bump (default): 0.0.1 -> 0.0.2
+bun run version:sync
+
+# Minor bump: 0.0.1 -> 0.1.0
+bun run version:sync minor
+
+# Major bump: 0.0.1 -> 1.0.0
+bun run version:sync major
+
+# Set specific version
+bun run version:sync 1.2.3
+```
+
+### How It Works
+1. Scans all workspace packages (`packages/*`)
+2. Finds the highest version across all packages
+3. Bumps all packages to the next version (or sets to specified version)
+4. Updates each package's `package.json` automatically
+
+### Version Bump Types
+- **patch**: Increments patch version (0.0.1 → 0.0.2) - *default*
+- **minor**: Increments minor version, resets patch (0.0.1 → 0.1.0)
+- **major**: Increments major version, resets minor/patch (0.0.1 → 1.0.0)
+
+### Typical Workflow
+```bash
+# 1. Check current state
+bun run version:dry-run
+
+# 2. Sync versions (patch bump)
+bun run version:sync
+
+# 3. Review changes
+git diff
+
+# 4. Commit
+git commit -m 'chore: bump all packages to v0.0.2'
+
+# 5. Build and publish
+bun run build
+bun run publish:all
 ```
 
 ---
