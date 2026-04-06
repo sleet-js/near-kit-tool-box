@@ -9,9 +9,7 @@ const near_mainnet_tld = "near";
 export function near_tld_for_network_web() {
   const networkId = getStoredNetworkId();
   const near_tld =
-    networkId === "testnet"
-      ? near_testnet_tld
-      : near_mainnet_tld;
+    networkId === "testnet" ? near_testnet_tld : near_mainnet_tld;
   console.log("near tld", near_tld);
   return near_tld;
 }
