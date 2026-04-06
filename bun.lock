@@ -11,7 +11,7 @@
     },
     "packages/env": {
       "name": "@near-kit-tool-box/env",
-      "version": "0.0.1",
+      "version": "0.0.4",
       "dependencies": {
         "@sleet-js/ft-methods-const": "^0.0.7",
         "@sleet-js/ref-exchange-methods-const": "^0.0.7",
@@ -30,7 +30,7 @@
     },
     "packages/fun": {
       "name": "@near-kit-tool-box/fun",
-      "version": "0.0.1",
+      "version": "0.0.4",
       "dependencies": {
         "@hot-labs/near-connect": "0.11.1",
         "@sleet-js/ft-methods-const": "^0.0.7",
@@ -50,21 +50,21 @@
     },
     "packages/web": {
       "name": "@near-kit-tool-box/web",
-      "version": "0.0.1",
+      "version": "0.0.4",
       "dependencies": {
-        "@hot-labs/near-connect": "latest",
-        "@sleet-js/ft-methods-const": "latest",
-        "@sleet-js/ref-exchange-methods-const": "latest",
-        "@sleet-js/wrap-near-contract-methods-const": "latest",
-        "near-kit": "latest",
-        "prettier": "latest",
-        "zod": "latest",
+        "@hot-labs/near-connect": "0.11.1",
+        "@sleet-js/ft-methods-const": "^0.0.7",
+        "@sleet-js/ref-exchange-methods-const": "^0.0.7",
+        "@sleet-js/wrap-near-contract-methods-const": "^0.0.7",
+        "near-kit": "^0.12.0",
+        "prettier": "^3.8.1",
+        "zod": "^4.3.6",
       },
       "devDependencies": {
-        "@types/bun": "latest",
+        "@types/bun": "^1.3.11",
       },
       "peerDependencies": {
-        "typescript": "latest",
+        "typescript": "^6.0.2",
       },
     },
   },
