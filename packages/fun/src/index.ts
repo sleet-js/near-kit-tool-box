@@ -42,6 +42,10 @@ export {
   pool_ping_fun,
 } from "./fun/pool/pool_fun";
 // ===========================================
+// NEAR account functions
+export { near_create_account_near_fun } from "./fun/near/create_account_near";
+export { delete_account_fun } from "./fun/near/delete_account_fun";
+// ===========================================
 // Types
 export type { AmountInput } from "./types/AmountInput";
 export type { greeting_args_params_interface } from "./lib/contract_greeting_args";

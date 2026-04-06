@@ -29,5 +29,8 @@ export {
   wrap_contractId_for_network_web,
   wrap_near_methods_const,
 } from "./lib/contract_near_wrap_const_web";
+export {
+  near_tld_for_network_web,
+} from "./lib/near_tld_const_web";
 // ===========================================
 // copyright 2026 by sleet.near
