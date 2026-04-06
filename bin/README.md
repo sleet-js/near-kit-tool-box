@@ -13,6 +13,9 @@ bun run bin/greeting_set_bin.ts
 bun run bin/ft_test/ft_balance_of_test.ts
 # rhea
 bun run bin/rhea_test/rhea_view_test.ts
+
+# near
+
 ```
 
 ---
