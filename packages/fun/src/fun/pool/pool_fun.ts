@@ -7,6 +7,7 @@ import type { FinalExecutionOutcome } from "near-kit";
 // call
 // ping
 // ===========================================
+// get_number_of_accounts
 export async function pool_get_number_of_accounts_fun(
   near: Near,
   pool_contractId: string,
