@@ -1,4 +1,3 @@
-/// <reference path="./types/hot-labs-near-connect.d.ts" />
 import { NearConnector } from "@hot-labs/near-connect";
 import { Near, fromHotConnect } from "near-kit";
 // ==============================================
