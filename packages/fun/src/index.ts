@@ -28,6 +28,7 @@ export {
   ft_transfer_fun,
   ft_transfer_call_fun,
   ft_storage_deposit_fun,
+  ft_metadata_fun,
 } from "./fun/ft/ft_fun";
 // ===========================================
 // wrapNEAR functions
@@ -48,6 +49,7 @@ export { delete_account_fun } from "./fun/near/delete_account_fun";
 // ===========================================
 // Types
 export type { AmountInput } from "./types/AmountInput";
+export type { FT_METADATA_TYPE } from "./types/ft_metadata_types";
 export type { greeting_args_params_interface } from "./lib/contract_greeting_args";
 export type {
   ref_args_params_interface,

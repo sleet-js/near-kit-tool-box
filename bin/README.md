@@ -12,6 +12,7 @@ bun run bin/greeting_get_bin.ts
 bun run bin/greeting_set_bin.ts
 # ft
 bun run bin/ft_test/ft_balance_of_test.ts
+bun run bin/ft_test/ft_metadata_test.ts
 # rhea
 bun run bin/rhea_test/rhea_view_test.ts
 

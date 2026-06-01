@@ -2,6 +2,8 @@ import { Near } from "near-kit";
 import { ft_methods_const } from "@sleet-js/ft-methods-const";
 import type { ft_args_params_interface } from "../../lib/contract_ft_args";
 import type { FinalExecutionOutcome } from "near-kit";
+import type { FT_METADATA_TYPE } from "../../types/ft_metadata_types";
+import { FT_METADATA_TYPE_Z_CONST } from "../../types/ft_metadata_types";
 // ===========================================
 // view
 // ft_balance_of
@@ -69,5 +71,18 @@ export async function ft_storage_deposit_fun(
     { attachedDeposit: "0.00125 NEAR" },
   );
   return result as FinalExecutionOutcome;
+}
+// ===========================================
+// ft_metadata
+export async function ft_metadata_fun(
+  near: Near,
+  ft_contractId: string,
+): Promise<FT_METADATA_TYPE> {
+  const result = await near.view(
+    ft_contractId,
+    ft_methods_const.ft_metadata,
+    {},
+  );
+  return FT_METADATA_TYPE_Z_CONST.parse(result);
 }
 // ===========================================
