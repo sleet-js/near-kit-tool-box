@@ -5,13 +5,13 @@
     "": {
       "name": "@near-kit-tool-box/root",
       "devDependencies": {
-        "@types/bun": "latest",
-        "typescript": "latest",
+        "@types/bun": "^1.3.14",
+        "typescript": "^6.0.3",
       },
     },
     "packages/env": {
       "name": "@near-kit-tool-box/env",
-      "version": "0.0.6",
+      "version": "0.0.7",
       "dependencies": {
         "@sleet-js/ft-methods-const": "^0.0.7",
         "@sleet-js/ref-exchange-methods-const": "^0.0.7",
@@ -30,27 +30,28 @@
     },
     "packages/fun": {
       "name": "@near-kit-tool-box/fun",
-      "version": "0.0.6",
+      "version": "0.0.7",
       "dependencies": {
-        "@hot-labs/near-connect": "0.11.4",
-        "@sleet-js/ft-methods-const": "^0.0.7",
-        "@sleet-js/ref-exchange-methods-const": "^0.0.7",
-        "@sleet-js/staking-pool-contract-methods-const": "^0.0.7",
-        "@sleet-js/wrap-near-contract-methods-const": "^0.0.7",
-        "near-kit": "^0.14.0",
-        "prettier": "^3.8.3",
-        "zod": "^4.4.3",
+        "@hot-labs/near-connect": "latest",
+        "@sleet-js/ft-methods-const": "latest",
+        "@sleet-js/pumpopoly-contract-methods-const": "latest",
+        "@sleet-js/ref-exchange-methods-const": "latest",
+        "@sleet-js/staking-pool-contract-methods-const": "latest",
+        "@sleet-js/wrap-near-contract-methods-const": "latest",
+        "near-kit": "latest",
+        "prettier": "latest",
+        "zod": "latest",
       },
       "devDependencies": {
-        "@types/bun": "^1.3.14",
+        "@types/bun": "latest",
       },
       "peerDependencies": {
-        "typescript": "^6.0.3",
+        "typescript": "latest",
       },
     },
     "packages/web": {
       "name": "@near-kit-tool-box/web",
-      "version": "0.0.6",
+      "version": "0.0.7",
       "dependencies": {
         "@hot-labs/near-connect": "0.11.4",
         "@sleet-js/ft-methods-const": "^0.0.7",
@@ -116,6 +117,8 @@
     "@scure/bip39": ["@scure/bip39@2.2.0", "", { "dependencies": { "@noble/hashes": "2.2.0", "@scure/base": "2.2.0" } }, "sha512-T/Bj/YvYMNkIPq6EENO6/rcs2e7qTNuyoUXf0KBFDmp0ZDu0H2X4Lq6yC3i0c8PcWkov5EbW+yQZZbdMmk154A=="],
 
     "@sleet-js/ft-methods-const": ["@sleet-js/ft-methods-const@0.0.7", "", { "peerDependencies": { "typescript": "^6.0.2" } }, "sha512-IQ+2aHI35Cx/X+fxQY0jZUlnjQPnh354nx/+J4HgTPCa8ODOBGI2ZfdXI0KXKJEvg0zv5I52Oax179/yu+oLkQ=="],
+
+    "@sleet-js/pumpopoly-contract-methods-const": ["@sleet-js/pumpopoly-contract-methods-const@0.0.3", "", { "peerDependencies": { "typescript": "^6.0.3" } }, "sha512-sxfDyI4vkyv03zdoHe9szZVCYJphkfmNPrbofxkUxx+q+p2bzOlBh4DVg5HbqcSAbh7u12L+lZXwdqSuNykOGg=="],
 
     "@sleet-js/ref-exchange-methods-const": ["@sleet-js/ref-exchange-methods-const@0.0.7", "", { "peerDependencies": { "typescript": "^6.0.2" } }, "sha512-BnPJRP0k1jBUzDUJpCfdxiRNiWosEJE2pV0H0MBF1rDhZJwdGoBNC0fO6P7wLutd5Y1cXWcFkloCgY5XHJ+RKQ=="],
 
