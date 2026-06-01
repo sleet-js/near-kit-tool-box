@@ -20,6 +20,7 @@ bun run bin/rhea_test/rhea_view_test.ts
 bun run bin/create_account_bin.ts
 bun run bin/delete_account_bin.ts
 bun run bin/add_delete_key_bin.ts
+bun run bin/add_delete_limited_key_bin.ts
 ```
 
 ---
