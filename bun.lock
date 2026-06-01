@@ -5,8 +5,8 @@
     "": {
       "name": "@near-kit-tool-box/root",
       "devDependencies": {
-        "@types/bun": "^1.3.13",
-        "typescript": "^6.0.3",
+        "@types/bun": "latest",
+        "typescript": "latest",
       },
     },
     "packages/env": {
@@ -22,7 +22,7 @@
         "zod": "^4.4.3",
       },
       "devDependencies": {
-        "@types/bun": "^1.3.13",
+        "@types/bun": "^1.3.14",
       },
       "peerDependencies": {
         "typescript": "^6.0.3",
@@ -32,7 +32,7 @@
       "name": "@near-kit-tool-box/fun",
       "version": "0.0.6",
       "dependencies": {
-        "@hot-labs/near-connect": "0.11.2",
+        "@hot-labs/near-connect": "0.11.4",
         "@sleet-js/ft-methods-const": "^0.0.7",
         "@sleet-js/ref-exchange-methods-const": "^0.0.7",
         "@sleet-js/staking-pool-contract-methods-const": "^0.0.7",
@@ -42,7 +42,7 @@
         "zod": "^4.4.3",
       },
       "devDependencies": {
-        "@types/bun": "^1.3.13",
+        "@types/bun": "^1.3.14",
       },
       "peerDependencies": {
         "typescript": "^6.0.3",
@@ -52,7 +52,7 @@
       "name": "@near-kit-tool-box/web",
       "version": "0.0.6",
       "dependencies": {
-        "@hot-labs/near-connect": "0.11.2",
+        "@hot-labs/near-connect": "0.11.4",
         "@sleet-js/ft-methods-const": "^0.0.7",
         "@sleet-js/ref-exchange-methods-const": "^0.0.7",
         "@sleet-js/wrap-near-contract-methods-const": "^0.0.7",
@@ -61,7 +61,7 @@
         "zod": "^4.4.3",
       },
       "devDependencies": {
-        "@types/bun": "^1.3.13",
+        "@types/bun": "^1.3.14",
       },
       "peerDependencies": {
         "typescript": "^6.0.3",
@@ -69,7 +69,7 @@
     },
   },
   "packages": {
-    "@hot-labs/near-connect": ["@hot-labs/near-connect@0.11.2", "", {}, "sha512-6Xl/mWyV55URpWx/yLLcEnP14UD2ZKv+YsyPpMzBFd4Gg4ACtyC1MplW59bBXzb0XLRKzut1Gq8XvkV9osy2zQ=="],
+    "@hot-labs/near-connect": ["@hot-labs/near-connect@0.11.4", "", {}, "sha512-exAL1gqysyCHewcMO334YJ3ddTPg3j9EyVM9novz5Jx4fLbG/YSYBlkYMjMNB8E9K/4I7BiemjOw9bQ+h80hEA=="],
 
     "@isaacs/fs-minipass": ["@isaacs/fs-minipass@4.0.1", "", { "dependencies": { "minipass": "^7.0.4" } }, "sha512-wgm9Ehl2jpeqP3zw/7mo3kRHFp5MEDhqAdwy1fTGkHAwnkGOVsgpvQhL8B5n1qlb01jV3n/bI0ZfZp5lWA1k4w=="],
 
@@ -123,13 +123,13 @@
 
     "@sleet-js/wrap-near-contract-methods-const": ["@sleet-js/wrap-near-contract-methods-const@0.0.7", "", { "peerDependencies": { "typescript": "^6.0.2" } }, "sha512-xZrHke+9qkA17eYR5TBDy19rMMCmxMY91rkM2OtA4sB1LbMu1KXO/InQ1PTiVk6ie9m9SCXAwTdMjel0Z8EMjQ=="],
 
-    "@types/bun": ["@types/bun@1.3.13", "", { "dependencies": { "bun-types": "1.3.13" } }, "sha512-9fqXWk5YIHGGnUau9TEi+qdlTYDAnOj+xLCmSTwXfAIqXr2x4tytJb43E9uCvt09zJURKXwAtkoH4nLQfzeTXw=="],
+    "@types/bun": ["@types/bun@1.3.14", "", { "dependencies": { "bun-types": "1.3.14" } }, "sha512-h1hFqFVcvAvD9j9K7ZW7vd82aSA+rTdznZa+5bwvCwqSB1jmmfLcbIWhOLx1/+boy/xmjgCs/OMUL8hRJSmnPw=="],
 
     "@types/node": ["@types/node@25.5.2", "", { "dependencies": { "undici-types": "~7.18.0" } }, "sha512-tO4ZIRKNC+MDWV4qKVZe3Ql/woTnmHDr5JD8UI5hn2pwBrHEwOEMZK7WlNb5RKB6EoJ02gwmQS9OrjuFnZYdpg=="],
 
     "@zorsh/zorsh": ["@zorsh/zorsh@0.5.0", "", {}, "sha512-aQ3jO0uoFfgPLkg68iP2nVzt9yFpBs/vrSiZ5G2TRmpNuhSW0lL1hMvszbalogf4JSuU7lcVFcPiiu/xC8/5AA=="],
 
-    "bun-types": ["bun-types@1.3.13", "", { "dependencies": { "@types/node": "*" } }, "sha512-QXKeHLlOLqQX9LgYaHJfzdBaV21T63HhFJnvuRCcjZiaUDpbs5ED1MgxbMra71CsryN/1dAoXuJJJwIv/2drVA=="],
+    "bun-types": ["bun-types@1.3.14", "", { "dependencies": { "@types/node": "*" } }, "sha512-4N0ig0fEomHt5R0KCFWjovxow98rIoRwKolrYdCcknNwMekCXRnWEUvgu5soYV8QXtVsrUD8B95MBOZGPvr6KQ=="],
 
     "chownr": ["chownr@3.0.0", "", {}, "sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g=="],
 
