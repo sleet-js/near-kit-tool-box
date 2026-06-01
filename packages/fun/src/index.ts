@@ -46,6 +46,8 @@ export {
 // NEAR account functions
 export { near_create_account_near_fun } from "./fun/near/create_account_near";
 export { delete_account_fun } from "./fun/near/delete_account_fun";
+export { add_key_fun } from "./fun/near/add_key_near";
+export { delete_key_fun } from "./fun/near/delete_key_near";
 // ===========================================
 // Types
 export type { AmountInput } from "./types/AmountInput";
