@@ -16,6 +16,7 @@ const limitedAccessResult = await add_key_fun(
     type: "functionCall",
     receiverId: rhea_contractId_for_network_env,
     methodNames: ["add_simple_pool"],
+    allowance: "1 NEAR",
   },
 );
 console.log(limitedAccessResult);
