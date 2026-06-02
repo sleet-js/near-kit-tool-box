@@ -7,6 +7,8 @@ import { FT_METADATA_TYPE_Z_CONST } from "../../types/ft_metadata_types";
 // ===========================================
 // view
 // ft_balance_of
+// ft_total_supply_fun
+// ft_metadata_fun
 // call
 // ft_transfer
 // ft_transfer_call

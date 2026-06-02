@@ -29,6 +29,7 @@ export {
   ft_transfer_call_fun,
   ft_storage_deposit_fun,
   ft_metadata_fun,
+  ft_total_supply_fun,
 } from "./fun/ft/ft_fun";
 // ===========================================
 // wrapNEAR functions
