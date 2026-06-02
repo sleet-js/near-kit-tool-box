@@ -5,8 +5,8 @@
     "": {
       "name": "@near-kit-tool-box/root",
       "devDependencies": {
-        "@types/bun": "^1.3.14",
-        "typescript": "^6.0.3",
+        "@types/bun": "latest",
+        "typescript": "latest",
       },
     },
     "packages/env": {
@@ -32,21 +32,21 @@
       "name": "@near-kit-tool-box/fun",
       "version": "0.0.7",
       "dependencies": {
-        "@hot-labs/near-connect": "latest",
-        "@sleet-js/ft-methods-const": "latest",
-        "@sleet-js/pumpopoly-contract-methods-const": "latest",
-        "@sleet-js/ref-exchange-methods-const": "latest",
-        "@sleet-js/staking-pool-contract-methods-const": "latest",
-        "@sleet-js/wrap-near-contract-methods-const": "latest",
-        "near-kit": "latest",
-        "prettier": "latest",
-        "zod": "latest",
+        "@hot-labs/near-connect": "0.11.4",
+        "@sleet-js/ft-methods-const": "^0.0.7",
+        "@sleet-js/pumpopoly-contract-methods-const": "^0.0.3",
+        "@sleet-js/ref-exchange-methods-const": "^0.0.7",
+        "@sleet-js/staking-pool-contract-methods-const": "^0.0.7",
+        "@sleet-js/wrap-near-contract-methods-const": "^0.0.7",
+        "near-kit": "^0.14.0",
+        "prettier": "^3.8.3",
+        "zod": "^4.4.3",
       },
       "devDependencies": {
-        "@types/bun": "latest",
+        "@types/bun": "^1.3.14",
       },
       "peerDependencies": {
-        "typescript": "latest",
+        "typescript": "^6.0.3",
       },
     },
     "packages/web": {
