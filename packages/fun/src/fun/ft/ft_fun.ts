@@ -12,6 +12,8 @@ import { FT_METADATA_TYPE_Z_CONST } from "../../types/ft_metadata_types";
 // ft_transfer_call
 // storage_deposit
 // ===========================================
+// VIEW
+// ===========================================
 // ft_balance_of
 export async function ft_balance_of_fun(
   near: Near,
@@ -25,6 +27,21 @@ export async function ft_balance_of_fun(
   );
   return result as string;
 }
+// ===========================================
+// ft_metadata
+export async function ft_metadata_fun(
+  near: Near,
+  ft_contractId: string,
+): Promise<FT_METADATA_TYPE> {
+  const result = await near.view(
+    ft_contractId,
+    ft_methods_const.ft_metadata,
+    {},
+  );
+  return FT_METADATA_TYPE_Z_CONST.parse(result);
+}
+// ===========================================
+// CALL
 // ===========================================
 // ft_transfer
 export async function ft_transfer_fun(
@@ -71,18 +88,5 @@ export async function ft_storage_deposit_fun(
     { attachedDeposit: "0.00125 NEAR" },
   );
   return result as FinalExecutionOutcome;
-}
-// ===========================================
-// ft_metadata
-export async function ft_metadata_fun(
-  near: Near,
-  ft_contractId: string,
-): Promise<FT_METADATA_TYPE> {
-  const result = await near.view(
-    ft_contractId,
-    ft_methods_const.ft_metadata,
-    {},
-  );
-  return FT_METADATA_TYPE_Z_CONST.parse(result);
 }
 // ===========================================
