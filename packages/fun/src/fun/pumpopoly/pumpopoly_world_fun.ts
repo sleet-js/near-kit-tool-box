@@ -14,7 +14,7 @@ export async function pumpopoly_move_player_fun(
     pumpopoly_contractId,
     world_pumpopoly_methods_const.move_player,
     {},
-    { gas: "5 Tgas" },
+    { gas: "60 Tgas" },
   );
   return result as FinalExecutionOutcome;
 }
