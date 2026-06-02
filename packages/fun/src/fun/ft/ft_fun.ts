@@ -28,6 +28,20 @@ export async function ft_balance_of_fun(
   return result as string;
 }
 // ===========================================
+// ft_total_supply_fun
+export async function ft_total_supply_fun(
+  near: Near,
+  ft_contractId: string,
+  account_id: ft_args_params_interface["account_id"],
+) {
+  const result = await near.view(
+    ft_contractId,
+    ft_methods_const.ft_total_supply,
+    { account_id: account_id },
+  );
+  return result as string;
+}
+// ===========================================
 // ft_metadata
 export async function ft_metadata_fun(
   near: Near,
