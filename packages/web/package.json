@@ -1,7 +1,7 @@
 {
   "name": "@near-kit-tool-box/web",
   "description": "Browser-specific NEAR KIT client setup with Hot Wallet Connect",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "homepage": "https://sleet-js.near.page",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -34,11 +34,11 @@
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "@hot-labs/near-connect": "0.11.4",
+    "@hot-labs/near-connect": "^0.11.4",
     "@sleet-js/ft-methods-const": "^0.0.7",
     "@sleet-js/ref-exchange-methods-const": "^0.0.7",
     "@sleet-js/wrap-near-contract-methods-const": "^0.0.7",
-    "near-kit": "^0.14.0",
+    "near-kit": "^0.19.0",
     "prettier": "^3.8.3",
     "zod": "^4.4.3"
   },
