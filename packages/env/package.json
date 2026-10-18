@@ -38,7 +38,7 @@
     "@sleet-js/ref-exchange-methods-const": "^0.0.7",
     "@sleet-js/wrap-near-contract-methods-const": "^0.0.7",
     "dotenv": "^17.4.2",
-    "near-kit": "latest",
+    "near-kit": "^0.20.2",
     "prettier": "^3.8.3",
     "zod": "^4.4.3"
   },
