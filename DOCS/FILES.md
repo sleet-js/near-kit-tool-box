@@ -1,8 +1,9 @@
 # FILES
 
 files/folders
-- bin - runable ts files for testing the fun package
-- scripts
+- bin/ - runable ts files for testing the fun package
+- scripts/
+- example/ - a ui example
 
 packages
 - packages/fun
