@@ -1,0 +1,16 @@
+# FILES
+
+files/folders
+- bin - runable ts files for testing the fun package
+- scripts
+
+packages
+- packages/fun
+- packages/env
+- packages/web
+
+
+
+==================
+<br/>
+copyright 2026 by sleet.near
