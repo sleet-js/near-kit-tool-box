@@ -49,23 +49,31 @@ import {
 
 ### @near-kit-tool-box/fun
 
-Contract functions (greeting, Rhea/Ref, FT, wrapNEAR).
+Contract functions (greeting, Rhea/Ref, FT, wrapNEAR, pumpopoly world,
+staking pool, NEAR TLD).
 
 ```js
 import {
   // Greeting
-  greeting_get_greeting_fun,
-  greeting_set_greeting_fun,
-  // Rhea/Ref
-  ref_get_number_of_pools_function,
-  ref_get_pool_function,
-  ref_swap_function,
+  greeting_get_greeting_fun_json,
+  greeting_set_greeting_fun_json,
+  // Rhea/Ref (rhea_ammv2)
+  rhea_ammv2_get_number_of_pools_fun_json,
+  rhea_ammv2_get_pool_fun_json,
+  rhea_ammv2_swap_fun_json,
   // FT
-  ft_balance_of_fun,
-  ft_transfer_fun,
+  ft_balance_of_fun_json,
+  ft_transfer_fun_json,
   // wrapNEAR
-  wrap_near_deposit_fun,
-  wrap_near_withdraw_fun,
+  wrap_near_deposit_fun_json,
+  wrap_near_withdraw_fun_json,
+  // pumpopoly world
+  pumpopoly_world_move_player_fun_json,
+  // NEAR TLD + local actions
+  near_create_account_fun_json,
+  near_add_key_fun_json,
+  // Staking pool
+  pool_get_number_of_accounts_fun_json,
   // Types
   AmountInput,
 } from "@near-kit-tool-box/fun";
@@ -107,16 +115,16 @@ cd packages/fun && bun publish --access public
 ```js
 // Browser (web + fun)
 import { near_kit_client } from "@near-kit-tool-box/web";
-import { greeting_get_greeting_fun } from "@near-kit-tool-box/fun";
+import { greeting_get_greeting_fun_json } from "@near-kit-tool-box/fun";
 
 const near = near_kit_client();
-const greeting = await greeting_get_greeting_fun(near, "hello.sleet.near");
+const greeting = await greeting_get_greeting_fun_json(near, "hello.sleet.near");
 
 // Backend (env + fun)
 import { near_kit_env } from "@near-kit-tool-box/env";
-import { ft_balance_of_fun } from "@near-kit-tool-box/fun";
+import { ft_balance_of_fun_json } from "@near-kit-tool-box/fun";
 
-const balance = await ft_balance_of_fun(
+const balance = await ft_balance_of_fun_json(
   near_kit_env,
   "token.near",
   "account.near",

@@ -3,13 +3,15 @@ import {
   rhea_contractId_for_network_env,
   wrap_contractId_for_network_env,
 } from "../../packages/env/src/index.js";
-import type { AmountInput } from "../../packages/fun/src/index.js";
-import {
-  wrap_near_deposit_fun,
-  ft_transfer_call_fun,
-  ref_swap_function,
+import type {
+  AmountInput,
+  rhea_ammv2_swap_action_type,
 } from "../../packages/fun/src/index.js";
-import type { ref_swap_action_type } from "../../packages/fun/src/index.js";
+import {
+  wrap_near_deposit_fun_json,
+  ft_transfer_call_fun_json,
+  rhea_ammv2_swap_fun_json,
+} from "../../packages/fun/src/index.js";
 // ==============================================
 // complete flow
 // 1. wrap NEAR
@@ -24,7 +26,7 @@ const ft_contractId = wrap_contractId_for_network_env;
 const receiver_id = rhea_contractId_for_network_env;
 const msg = "";
 const amount = "2000000000000000000000000"; // 2 NEAR
-const swap_actions: ref_swap_action_type[] = [
+const swap_actions: rhea_ammv2_swap_action_type[] = [
   {
     pool_id: 2459,
     token_in: "wrap.testnet",
@@ -42,13 +44,13 @@ const swap_actions: ref_swap_action_type[] = [
 // ==============================================
 console.log("==============================================");
 // console.log(
-//   await wrap_near_deposit_fun(near_kit_env, ft_contractId, amount_near),
+//   await wrap_near_deposit_fun_json(near_kit_env, ft_contractId, amount_near),
 // );
 console.log("==============================================");
 // ==============================================
 console.log("==============================================");
 // console.log(
-//   await ft_transfer_call_fun(
+//   await ft_transfer_call_fun_json(
 //     near_kit_env,
 //     ft_contractId,
 //     receiver_id,
@@ -60,7 +62,7 @@ console.log("==============================================");
 // ==============================================
 console.log("==============================================");
 console.log(
-  await ref_swap_function(
+  await rhea_ammv2_swap_fun_json(
     near_kit_env,
     rhea_contractId_for_network_env,
     swap_actions,

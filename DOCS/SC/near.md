@@ -1,0 +1,33 @@
+# near
+
+the `near` (mainnet) / `testnet` (testnet) TLD registrar / linkdrop
+contracts. Both share the `near-linkdrop` source — only the deploy
+account differs.
+
+---
+
+#### DETAILS
+
+**CONTRACT ID PER NETWORK**
+- MAINNET: near
+- TESTNET: testnet
+
+```sh
+# near cli - get a list of methods
+near contract inspect testnet network-config testnet now
+near contract inspect near    network-config mainnet now
+```
+
+#### FILES
+
+- `packages/fun/src/lib/methods/methods_near.ts`
+- `packages/fun/src/lib/const_id/near_contract_id_const.ts`
+- `packages/fun/src/fun/near/near_create_account_fun_json.ts`
+- `packages/fun/src/fun/near/near_add_key_fun_json.ts`, `packages/fun/src/fun/near/near_delete_key_fun_json.ts`, `packages/fun/src/fun/near/near_delete_account_fun_json.ts`
+- `bin/create_account_bin.ts`, `bin/add_delete_key_bin.ts`, `bin/add_delete_limited_key_bin.ts`, `bin/delete_account_bin.ts`
+
+
+
+==========================
+<br/>
+copyright 2026 by sleet.near

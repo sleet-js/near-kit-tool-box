@@ -1,67 +1,83 @@
 // ===========================================
-// fun - reusable contract functions
+// @near-kit-tool-box/fun — public barrel.
+//
+// Re-exports every helper function, the shared method-name constants,
+// and the per-network contract id constants.
 // ===========================================
-// Greeting contract functions
-export { greeting_get_greeting_fun } from "./fun/greeting/greeting_get_fun";
-export { greeting_set_greeting_fun } from "./fun/greeting/greeting_set_fun";
+
+// ---------- rhea_ammv2 ----------
 // ===========================================
-// Rhea/Ref exchange functions (view)
-export {
-  ref_get_number_of_pools_function,
-  ref_get_deposits_function,
-  ref_get_pool_function,
-  ref_get_pools_function,
-  ref_get_return_function,
-  ref_storage_balance_of_function,
-} from "./fun/rhea/rhea_view_fun";
-// Rhea/Ref exchange functions (call)
-export {
-  ref_storage_deposit_function,
-  ref_swap_function,
-  ref_withdraw_function,
-  ref_add_simple_pool_function,
-} from "./fun/rhea/rhea_call_fun";
+export { rhea_ammv2_get_number_of_pools_fun_json } from "./fun/rhea_ammv2/rhea_ammv2_get_number_of_pools_fun_json";
+export { rhea_ammv2_get_pool_fun_json } from "./fun/rhea_ammv2/rhea_ammv2_get_pool_fun_json";
+export { rhea_ammv2_get_pools_fun_json } from "./fun/rhea_ammv2/rhea_ammv2_get_pools_fun_json";
+export { rhea_ammv2_get_deposits_fun_json } from "./fun/rhea_ammv2/rhea_ammv2_get_deposits_fun_json";
+export { rhea_ammv2_get_return_fun_json } from "./fun/rhea_ammv2/rhea_ammv2_get_return_fun_json";
+export { rhea_ammv2_storage_balance_of_fun_json } from "./fun/rhea_ammv2/rhea_ammv2_storage_balance_of_fun_json";
+export { rhea_ammv2_storage_deposit_fun_json } from "./fun/rhea_ammv2/rhea_ammv2_storage_deposit_fun_json";
+export { rhea_ammv2_swap_fun_json } from "./fun/rhea_ammv2/rhea_ammv2_swap_fun_json";
+export { rhea_ammv2_withdraw_fun_json } from "./fun/rhea_ammv2/rhea_ammv2_withdraw_fun_json";
+export { rhea_ammv2_add_simple_pool_fun_json } from "./fun/rhea_ammv2/rhea_ammv2_add_simple_pool_fun_json";
+
+// ---------- ft (NEP-141 / NEP-145) ----------
 // ===========================================
-// FT (Fungible Token) functions
-export {
-  ft_balance_of_fun,
-  ft_transfer_fun,
-  ft_transfer_call_fun,
-  ft_storage_deposit_fun,
-  ft_metadata_fun,
-  ft_total_supply_fun,
-} from "./fun/ft/ft_fun";
+export { ft_balance_of_fun_json } from "./fun/ft/ft_balance_of_fun_json";
+export { ft_total_supply_fun_json } from "./fun/ft/ft_total_supply_fun_json";
+export { ft_metadata_fun_json } from "./fun/ft/ft_metadata_fun_json";
+export { ft_transfer_fun_json } from "./fun/ft/ft_transfer_fun_json";
+export { ft_transfer_call_fun_json } from "./fun/ft/ft_transfer_call_fun_json";
+export { ft_storage_deposit_fun_json } from "./fun/ft/ft_storage_deposit_fun_json";
+
+// ---------- greeting ----------
 // ===========================================
-// wrapNEAR functions
-export {
-  wrap_near_deposit_fun,
-  wrap_near_withdraw_fun,
-} from "./fun/near/wrap_near";
+export { greeting_get_greeting_fun_json } from "./fun/greeting/greeting_get_greeting_fun_json";
+export { greeting_set_greeting_fun_json } from "./fun/greeting/greeting_set_greeting_fun_json";
+
+// ---------- NEAR / linkdrop / local actions ----------
 // ===========================================
-// pool fun
-export {
-  pool_get_number_of_accounts_fun,
-  pool_ping_fun,
-} from "./fun/pool/pool_fun";
+export { near_create_account_fun_json } from "./fun/near/near_create_account_fun_json";
+export { near_add_key_fun_json } from "./fun/near/near_add_key_fun_json";
+export { near_delete_key_fun_json } from "./fun/near/near_delete_key_fun_json";
+export { near_delete_account_fun_json } from "./fun/near/near_delete_account_fun_json";
+
+// ---------- wrap_near ----------
 // ===========================================
-// NEAR account functions
-export { near_create_account_near_fun } from "./fun/near/create_account_near";
-export { delete_account_fun } from "./fun/near/delete_account_fun";
-export { add_key_fun } from "./fun/near/add_key_near";
-export { delete_key_fun } from "./fun/near/delete_key_near";
+export { wrap_near_deposit_fun_json } from "./fun/wrap_near/wrap_near_deposit_fun_json";
+export { wrap_near_withdraw_fun_json } from "./fun/wrap_near/wrap_near_withdraw_fun_json";
+
+// ---------- pumpopoly world ----------
 // ===========================================
-// pumpopoly functions
-export { pumpopoly_move_player_fun } from "./fun/pumpopoly/pumpopoly_world_fun";
+export { pumpopoly_world_move_player_fun_json } from "./fun/pumpopoly_world/pumpopoly_world_move_player_fun_json";
+export { pumpopoly_world_elite_move_fun_json } from "./fun/pumpopoly_world/pumpopoly_world_elite_move_fun_json";
+
+// ---------- pool (staking pool) ----------
 // ===========================================
-// Types
+export { pool_get_number_of_accounts_fun_json } from "./fun/pool/pool_get_number_of_accounts_fun_json";
+export { pool_get_accounts_fun_json } from "./fun/pool/pool_get_accounts_fun_json";
+export { pool_deposit_and_stake_fun_json } from "./fun/pool/pool_deposit_and_stake_fun_json";
+export { pool_ping_fun_json } from "./fun/pool/pool_ping_fun_json";
+
+// ---------- shared types ----------
+// ===========================================
 export type { AmountInput } from "./types/AmountInput";
-export type { FT_METADATA_TYPE } from "./types/ft_metadata_types";
-export type { greeting_args_params_interface } from "./lib/contract_greeting_args";
+export type { FT_METADATA_TYPE } from "./types/ft_metadata_get_response_type";
+export type { RHEA_AMMV2_GET_POOL_TYPE } from "./types/rhea_ammv2_get_pool_type";
+export type { RHEA_AMMV2_GET_DEPOSITS_TYPE } from "./types/rhea_ammv2_get_deposits_type";
+export type { STORAGE_BALANCE_OF_RESPONSE_TYPE } from "./types/storage_balance_of_response_type";
+export type { greeting_args } from "./lib/args/greeting_args";
+export type { ft_args } from "./lib/args/ft_args";
 export type {
-  ref_args_params_interface,
-  ref_swap_action_type,
-  ref_swap_function_args,
-} from "./lib/contract_rhea_args";
-export type { ft_args_params_interface } from "./lib/contract_ft_args";
+  rhea_ammv2_args,
+  rhea_ammv2_swap_action_type,
+  rhea_ammv2_swap_function_args,
+} from "./lib/args/rhea_ammv2_args";
+
+// ---------- shared method-name constants ----------
+// ===========================================
+export * from "./lib/methods";
+
+// ---------- shared per-network contract id constants ----------
+// ===========================================
+export * from "./lib/const_id";
+
 // ===========================================
 // copyright 2026 by sleet.near

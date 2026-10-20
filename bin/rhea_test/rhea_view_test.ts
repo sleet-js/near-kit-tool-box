@@ -3,17 +3,17 @@ import {
   rhea_contractId_for_network_env,
 } from "../../packages/env/src/index.js";
 import {
-  ref_get_number_of_pools_function,
-  ref_get_pool_function,
-  ref_get_pools_function,
-  ref_get_deposits_function,
-  ref_get_return_function,
-  ref_storage_balance_of_function,
+  rhea_ammv2_get_number_of_pools_fun_json,
+  rhea_ammv2_get_pool_fun_json,
+  rhea_ammv2_get_pools_fun_json,
+  rhea_ammv2_get_deposits_fun_json,
+  rhea_ammv2_get_return_fun_json,
+  rhea_ammv2_storage_balance_of_fun_json,
 } from "../../packages/fun/src/index.js";
 // ==============================================
 console.log("==============================================");
 console.log(
-  await ref_get_number_of_pools_function(
+  await rhea_ammv2_get_number_of_pools_fun_json(
     near_kit_env,
     rhea_contractId_for_network_env,
   ),
@@ -22,7 +22,7 @@ console.log("==============================================");
 // ==============================================
 console.log("==============================================");
 console.log(
-  await ref_get_pool_function(
+  await rhea_ammv2_get_pool_fun_json(
     near_kit_env,
     rhea_contractId_for_network_env,
     100,
@@ -33,7 +33,7 @@ console.log("==============================================");
 // ==============================================
 console.log("==============================================");
 console.log(
-  await ref_get_pools_function(
+  await rhea_ammv2_get_pools_fun_json(
     near_kit_env,
     rhea_contractId_for_network_env,
     0,
@@ -44,7 +44,7 @@ console.log("==============================================");
 // ==============================================
 console.log("==============================================");
 console.log(
-  await ref_get_deposits_function(
+  await rhea_ammv2_get_deposits_fun_json(
     near_kit_env,
     rhea_contractId_for_network_env,
     "sleet.testnet",
@@ -54,7 +54,7 @@ console.log("==============================================");
 // ==============================================
 console.log("==============================================");
 console.log(
-  await ref_storage_balance_of_function(
+  await rhea_ammv2_storage_balance_of_fun_json(
     near_kit_env,
     rhea_contractId_for_network_env,
     "sleet.testnet",
@@ -64,7 +64,7 @@ console.log("==============================================");
 // ==============================================
 console.log("==============================================");
 console.log(
-  await ref_get_return_function(
+  await rhea_ammv2_get_return_fun_json(
     near_kit_env,
     rhea_contractId_for_network_env,
     2459,

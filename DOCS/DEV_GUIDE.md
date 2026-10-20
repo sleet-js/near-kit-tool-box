@@ -8,8 +8,16 @@ near-kit-tool-box/
 │   ├── web/        # Browser client (Hot Wallet Connect, localStorage)
 │   ├── env/        # Backend client (.env configuration)
 │   └── fun/        # Reusable contract functions
+│       └── src/
+│           ├── index.ts                        # Public barrel
+│           ├── fun/<contract>/<contract>_<method>_fun_json.ts   # one folder per contract, one file per function
+│           ├── lib/methods/methods_<contract>.ts               # method-name constants (one file per contract)
+│           ├── lib/const_id/<contract>_contract_id_const.ts    # testnet/mainnet contract id pairs + `*_contractid(network)` resolver
+│           ├── lib/args/<contract>_args.ts                     # parameter type maps
+│           └── types/<contract>_<response>_type.ts             # response type definitions
 ├── bin/            # CLI test scripts
 ├── scripts/        # Development utilities (version sync)
+├── DOCS/SC/        # Per-contract documentation, one .md per smart contract
 └── package.json    # Root workspace config
 ```
 
@@ -139,7 +147,7 @@ bun update --latest
 | ------- | ---------------------------------------------- |
 | **web** | `@hot-labs/near-connect`, `near-kit`, `zod`    |
 | **env** | `near-kit`, `dotenv`, `zod`                    |
-| **fun** | `near-kit`, `@sleet-js/*-methods-const`, `zod` |
+| **fun** | `near-kit`, `zod` (method consts are vendored in `src/lib/methods/`) |
 
 All packages use:
 
@@ -178,9 +186,9 @@ bun run bin/rhea_test/rhea_call_test.ts
 
 ## Package Dependencies Overview
 
-- **@sleet-js/ft-methods-const** - FT contract method definitions
-- **@sleet-js/ref-exchange-methods-const** - Ref exchange methods
-- **@sleet-js/wrap-near-contract-methods-const** - wrapNEAR contract methods
+The `fun` package no longer depends on any external `@sleet-js/*-methods-const`
+packages — the method constants are vendored inside `packages/fun/src/lib/methods/`.
+
 - **@hot-labs/near-connect** - Hot Wallet Connect (web only)
 - **near-kit** - Core NEAR protocol client
 - **zod** - Runtime type validation
