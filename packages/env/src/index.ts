@@ -17,6 +17,11 @@
 // ===========================================
 
 // env-driven config
-export { near_kit_env, NEAR_NETWORK, NEAR_ACCOUNT_ID, NEAR_PRIVATE_KEY } from "./new-env";
+export {
+  near_kit_env,
+  NEAR_NETWORK,
+  NEAR_ACCOUNT_ID,
+  NEAR_PRIVATE_KEY,
+} from "./new-env";
 // ===========================================
 // copyright 2026 by sleet.near

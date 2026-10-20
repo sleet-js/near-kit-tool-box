@@ -1,7 +1,4 @@
-import {
-  NEAR_NETWORK,
-  near_kit_env,
-} from "../../packages/env/src/index.js";
+import { NEAR_NETWORK, near_kit_env } from "../../packages/env/src/index.js";
 import type {
   AmountInput,
   rhea_ammv2_swap_action_type,

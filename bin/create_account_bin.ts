@@ -1,7 +1,4 @@
-import {
-  NEAR_NETWORK,
-  near_kit_env,
-} from "../packages/env/src/index.js";
+import { NEAR_NETWORK, near_kit_env } from "../packages/env/src/index.js";
 import {
   near_create_account_fun_json,
   near_tld_contractid,

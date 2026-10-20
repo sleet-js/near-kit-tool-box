@@ -143,10 +143,10 @@ bun update --latest
 
 ### Common Dependencies by Package
 
-| Package | Key Dependencies                               |
-| ------- | ---------------------------------------------- |
-| **web** | `@hot-labs/near-connect`, `near-kit`, `zod`    |
-| **env** | `near-kit`, `dotenv`, `zod`                    |
+| Package | Key Dependencies                                                     |
+| ------- | -------------------------------------------------------------------- |
+| **web** | `@hot-labs/near-connect`, `near-kit`, `zod`                          |
+| **env** | `near-kit`, `dotenv`, `zod`                                          |
 | **fun** | `near-kit`, `zod` (method consts are vendored in `src/lib/methods/`) |
 
 All packages use:

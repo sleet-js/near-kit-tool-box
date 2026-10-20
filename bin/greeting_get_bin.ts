@@ -1,7 +1,4 @@
-import {
-  NEAR_NETWORK,
-  near_kit_env,
-} from "../packages/env/src/index.js";
+import { NEAR_NETWORK, near_kit_env } from "../packages/env/src/index.js";
 import {
   greeting_contractid,
   greeting_get_greeting_fun_json,

@@ -1,7 +1,10 @@
 // =================================================
 // Contract id constants for the wrap.near wNEAR contract.
 // =================================================
-import type { CONTRACT_ID_CONST_TYPE, NETWORK_ID } from "./contract_id_const_type";
+import type {
+  CONTRACT_ID_CONST_TYPE,
+  NETWORK_ID,
+} from "./contract_id_const_type";
 
 // =================================================
 export const WRAP_NEAR_CONTRACT_ID_CONST: CONTRACT_ID_CONST_TYPE = {

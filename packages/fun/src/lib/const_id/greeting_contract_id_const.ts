@@ -1,7 +1,10 @@
 // =================================================
 // Contract id constants for the greeting smart contract.
 // =================================================
-import type { CONTRACT_ID_CONST_TYPE, NETWORK_ID } from "./contract_id_const_type";
+import type {
+  CONTRACT_ID_CONST_TYPE,
+  NETWORK_ID,
+} from "./contract_id_const_type";
 
 // =================================================
 export const GREETING_CONTRACT_ID_CONST: CONTRACT_ID_CONST_TYPE = {

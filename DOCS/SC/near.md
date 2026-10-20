@@ -9,6 +9,7 @@ account differs.
 #### DETAILS
 
 **CONTRACT ID PER NETWORK**
+
 - MAINNET: near
 - TESTNET: testnet
 
@@ -25,8 +26,6 @@ near contract inspect near    network-config mainnet now
 - `packages/fun/src/fun/near/near_create_account_fun_json.ts`
 - `packages/fun/src/fun/near/near_add_key_fun_json.ts`, `packages/fun/src/fun/near/near_delete_key_fun_json.ts`, `packages/fun/src/fun/near/near_delete_account_fun_json.ts`
 - `bin/create_account_bin.ts`, `bin/add_delete_key_bin.ts`, `bin/add_delete_limited_key_bin.ts`, `bin/delete_account_bin.ts`
-
-
 
 ==========================
 <br/>

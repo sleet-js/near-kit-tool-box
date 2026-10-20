@@ -1,16 +1,16 @@
 # FILES
 
 files/folders
+
 - bin/ - runable ts files for testing the fun package
 - scripts/
 - DOCS/
 
 packages
+
 - packages/fun
 - packages/env
 - packages/web
-
-
 
 ==================
 <br/>

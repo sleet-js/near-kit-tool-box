@@ -18,12 +18,12 @@ near contract inspect <pool_account> network-config mainnet now
 
 #### KNOWN POOLS (v2 hash)
 
-| pool account id |
-| --- |
+| pool account id        |
+| ---------------------- |
 | `everything.pool.near` |
-| `shitzu.pool.near` |
+| `shitzu.pool.near`     |
 | `shadowcorp.pool.near` |
-| `intear.pool.near` |
+| `intear.pool.near`     |
 
 > Aurorapool (`<validator>.pool.near` for aurora) runs a **patched**
 > v2 pool. Method surface matches but **always verify code_hash at the
@@ -33,8 +33,6 @@ near contract inspect <pool_account> network-config mainnet now
 
 - `packages/fun/src/lib/methods/methods_pool.ts`
 - `packages/fun/src/fun/pool/pool_get_number_of_accounts_fun_json.ts`, `packages/fun/src/fun/pool/pool_get_accounts_fun_json.ts`, `packages/fun/src/fun/pool/pool_deposit_and_stake_fun_json.ts`, `packages/fun/src/fun/pool/pool_ping_fun_json.ts`
-
-
 
 ==========================
 <br/>

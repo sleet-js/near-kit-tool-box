@@ -1,7 +1,10 @@
 // =================================================
 // Contract id constants for the pumpopoly world game contract.
 // =================================================
-import type { CONTRACT_ID_CONST_TYPE, NETWORK_ID } from "./contract_id_const_type";
+import type {
+  CONTRACT_ID_CONST_TYPE,
+  NETWORK_ID,
+} from "./contract_id_const_type";
 
 // =================================================
 export const PUMPOPOLY_WORLD_CONTRACT_ID_CONST: CONTRACT_ID_CONST_TYPE = {

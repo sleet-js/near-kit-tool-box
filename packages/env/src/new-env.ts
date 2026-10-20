@@ -13,8 +13,8 @@ export const NEAR_NETWORK: "mainnet" | "testnet" =
 
 export const NEAR_ACCOUNT_ID: string = process.env.NEAR_ACCOUNT_ID ?? "";
 
-export const NEAR_PRIVATE_KEY: PrivateKey | undefined =
-  process.env.NEAR_PRIVATE_KEY as PrivateKey | undefined;
+export const NEAR_PRIVATE_KEY: PrivateKey | undefined = process.env
+  .NEAR_PRIVATE_KEY as PrivateKey | undefined;
 
 // ==============================================
 // Initialize for backend/scripts

@@ -9,6 +9,7 @@ standards — the `ft_contractId` parameter is supplied by the caller.
 #### DETAILS
 
 **CONTRACT ID PER NETWORK**
+
 - (varies — pass the contract id yourself)
 
 ```sh
@@ -23,8 +24,6 @@ near contract inspect token.testnet network-config testnet now
 - `packages/fun/src/types/ft_metadata_get_response_type.ts`
 - `packages/fun/src/fun/ft/ft_balance_of_fun_json.ts`, `packages/fun/src/fun/ft/ft_total_supply_fun_json.ts`, `packages/fun/src/fun/ft/ft_metadata_fun_json.ts`, `packages/fun/src/fun/ft/ft_transfer_fun_json.ts`, `packages/fun/src/fun/ft/ft_transfer_call_fun_json.ts`, `packages/fun/src/fun/ft/ft_storage_deposit_fun_json.ts`
 - `bin/ft_test/ft_balance_of_test.ts`, `bin/ft_test/ft_metadata_test.ts`
-
-
 
 ==========================
 <br/>

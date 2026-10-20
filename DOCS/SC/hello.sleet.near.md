@@ -7,6 +7,7 @@ the greeting smart contract used in the TS fun package
 #### DETAILS
 
 **CONTRACT ID PER NETWORK**
+
 - MAINNET: hello.sleet.near
 - TESTNET: hello.sleet.testnet
 
@@ -23,8 +24,6 @@ near contract inspect hello.sleet.near network-config mainnet now
 - `packages/fun/src/lib/args/greeting_args.ts`
 - `packages/fun/src/fun/greeting/greeting_get_greeting_fun_json.ts`, `packages/fun/src/fun/greeting/greeting_set_greeting_fun_json.ts`
 - `bin/greeting_get_bin.ts`, `bin/greeting_set_bin.ts`
-
-
 
 ==========================
 <br/>

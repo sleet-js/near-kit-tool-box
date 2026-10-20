@@ -47,7 +47,8 @@ export const pool_methods_const = {
   get_account_unstaked_balance: "get_account_unstaked_balance",
   get_account_staked_balance: "get_account_staked_balance",
   get_account_total_balance: "get_account_total_balance",
-  is_account_unstaked_balance_available: "is_account_unstaked_balance_available",
+  is_account_unstaked_balance_available:
+    "is_account_unstaked_balance_available",
   get_total_staked_balance: "get_total_staked_balance",
   get_reward_fee_fraction: "get_reward_fee_fraction",
   get_staking_key: "get_staking_key",
