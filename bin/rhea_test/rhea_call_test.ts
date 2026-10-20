@@ -1,16 +1,17 @@
 import {
+  MY_ENV_NEAR_networkId,
   near_kit_env,
-  rhea_contractId_for_network_env,
-  wrap_contractId_for_network_env,
 } from "../../packages/env/src/index.js";
 import type {
   AmountInput,
   rhea_ammv2_swap_action_type,
 } from "../../packages/fun/src/index.js";
 import {
-  wrap_near_deposit_fun_json,
   ft_transfer_call_fun_json,
+  rhea_ammv2_contractid,
   rhea_ammv2_swap_fun_json,
+  wrap_near_contractid,
+  wrap_near_deposit_fun_json,
 } from "../../packages/fun/src/index.js";
 // ==============================================
 // complete flow
@@ -21,15 +22,18 @@ import {
 // 4. withdraw ❌
 // 5. un wrap ❌
 // ==============================================
+const networkId: "mainnet" | "testnet" =
+  MY_ENV_NEAR_networkId === "mainnet" ? "mainnet" : "testnet";
+const rhea_contractId = rhea_ammv2_contractid(networkId);
+const ft_contractId = wrap_near_contractid(networkId);
 const amount_near: AmountInput = "2 NEAR";
-const ft_contractId = wrap_contractId_for_network_env;
-const receiver_id = rhea_contractId_for_network_env;
+const receiver_id = rhea_contractId;
 const msg = "";
 const amount = "2000000000000000000000000"; // 2 NEAR
 const swap_actions: rhea_ammv2_swap_action_type[] = [
   {
     pool_id: 2459,
-    token_in: "wrap.testnet",
+    token_in: ft_contractId,
     amount_in: "2000000000000000000000000",
     token_out: "shit-237.factory.v10.meme-cooking.testnet",
     min_amount_out: "0",
@@ -37,7 +41,7 @@ const swap_actions: rhea_ammv2_swap_action_type[] = [
   {
     pool_id: 2459,
     token_in: "shit-237.factory.v10.meme-cooking.testnet",
-    token_out: "wrap.testnet",
+    token_out: ft_contractId,
     min_amount_out: "0",
   },
 ];
@@ -64,7 +68,7 @@ console.log("==============================================");
 console.log(
   await rhea_ammv2_swap_fun_json(
     near_kit_env,
-    rhea_contractId_for_network_env,
+    rhea_contractId,
     swap_actions,
     "ref.huggies.testnet",
   ),

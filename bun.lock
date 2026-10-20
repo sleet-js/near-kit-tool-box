@@ -13,13 +13,9 @@
       "name": "@near-kit-tool-box/env",
       "version": "0.1.7",
       "dependencies": {
-        "@sleet-js/ft-methods-const": "^0.0.7",
-        "@sleet-js/ref-exchange-methods-const": "^0.0.7",
-        "@sleet-js/wrap-near-contract-methods-const": "^0.0.7",
         "dotenv": "^17.4.2",
         "near-kit": "^0.20.2",
         "prettier": "^3.8.3",
-        "zod": "^4.4.3",
       },
       "devDependencies": {
         "@types/bun": "^1.3.14",
@@ -48,12 +44,8 @@
       "version": "0.1.7",
       "dependencies": {
         "@hot-labs/near-connect": "^0.11.4",
-        "@sleet-js/ft-methods-const": "^0.0.7",
-        "@sleet-js/ref-exchange-methods-const": "^0.0.7",
-        "@sleet-js/wrap-near-contract-methods-const": "^0.0.7",
         "near-kit": "^0.20.2",
         "prettier": "^3.8.3",
-        "zod": "^4.4.3",
       },
       "devDependencies": {
         "@types/bun": "^1.3.14",
@@ -113,12 +105,6 @@
     "@scure/bip32": ["@scure/bip32@2.4.0", "", { "dependencies": { "@noble/curves": "2.4.0", "@noble/hashes": "2.4.0", "@scure/base": "2.4.0" } }, "sha512-i3DS0CptAocyvqE4n3SUkpzeQK4vJMFwWLofTwRiiKo2aWojBOfyMCgfKw9HVpO6fSY5AK86sHS/Uzn8kK9Few=="],
 
     "@scure/bip39": ["@scure/bip39@2.4.0", "", { "dependencies": { "@noble/hashes": "2.4.0" } }, "sha512-82dxFbZUYboyOf0AXiydsQrFQ5Q4h9mX+O2UkE91ROYmsc0BKMGZLwDmy96Jpa2+vrtoxomjUhy1RPIgH/r2nA=="],
-
-    "@sleet-js/ft-methods-const": ["@sleet-js/ft-methods-const@0.0.7", "", { "peerDependencies": { "typescript": "^6.0.2" } }, "sha512-IQ+2aHI35Cx/X+fxQY0jZUlnjQPnh354nx/+J4HgTPCa8ODOBGI2ZfdXI0KXKJEvg0zv5I52Oax179/yu+oLkQ=="],
-
-    "@sleet-js/ref-exchange-methods-const": ["@sleet-js/ref-exchange-methods-const@0.0.7", "", { "peerDependencies": { "typescript": "^6.0.2" } }, "sha512-BnPJRP0k1jBUzDUJpCfdxiRNiWosEJE2pV0H0MBF1rDhZJwdGoBNC0fO6P7wLutd5Y1cXWcFkloCgY5XHJ+RKQ=="],
-
-    "@sleet-js/wrap-near-contract-methods-const": ["@sleet-js/wrap-near-contract-methods-const@0.0.7", "", { "peerDependencies": { "typescript": "^6.0.2" } }, "sha512-xZrHke+9qkA17eYR5TBDy19rMMCmxMY91rkM2OtA4sB1LbMu1KXO/InQ1PTiVk6ie9m9SCXAwTdMjel0Z8EMjQ=="],
 
     "@types/bun": ["@types/bun@1.4.3", "", { "dependencies": { "bun-types": "1.4.3" } }, "sha512-N67Pqy8JXbAY/j0tNraS3V5mubGvc6rrrNDmDCtZLlFzccbUJPDb0tvgUBC5q4m8ybkP93Jcn1QB+RYQ6PvBhw=="],
 

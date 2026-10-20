@@ -27,10 +27,11 @@ import {
   toggleNetwork,
   setNetwork_mainnet,
   setNetwork_testnet,
-  hello_contractId_for_network_web,
-  rhea_contractId_for_network_web,
-  wrap_contractId_for_network_web,
+  getStoredNetworkId,
 } from "@near-kit-tool-box/web";
+
+import { rhea_ammv2_contractid } from "@near-kit-tool-box/fun";
+const id = rhea_ammv2_contractid(getStoredNetworkId());
 ```
 
 ### @near-kit-tool-box/env
@@ -41,10 +42,13 @@ Backend client with environment variable configuration.
 import {
   near_kit_env,
   MY_ENV_NEAR_accountId,
-  hello_contractId_for_network_env,
-  rhea_contractId_for_network_env,
-  wrap_contractId_for_network_env,
+  MY_ENV_NEAR_networkId,
 } from "@near-kit-tool-box/env";
+
+import { rhea_ammv2_contractid } from "@near-kit-tool-box/fun";
+const id = rhea_ammv2_contractid(
+  MY_ENV_NEAR_networkId as "mainnet" | "testnet",
+);
 ```
 
 ### @near-kit-tool-box/fun

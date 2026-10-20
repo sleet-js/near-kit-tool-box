@@ -1,5 +1,16 @@
 // ===========================================
-// web
+// @near-kit-tool-box/web — browser NEAR KIT setup.
+//
+// The per-network contract id resolver helpers and the method-name
+// constants now live in `@near-kit-tool-box/fun` under
+// `lib/const_id/*.ts` and `lib/methods/*.ts`. Resolve contract ids
+// yourself at the call site, e.g.
+//
+//   import { getStoredNetworkId } from "@near-kit-tool-box/web";
+//   import { rhea_ammv2_contractid } from "@near-kit-tool-box/fun";
+//   const id = rhea_ammv2_contractid(getStoredNetworkId());
+// ===========================================
+
 // near_kit_client
 export {
   near_kit_client,
@@ -15,20 +26,5 @@ export {
 } from "./network";
 // archival
 export { near_kit_client_archival } from "./new-archival";
-// ===========================================
-// utility - contract constants (web versions)
-export {
-  hello_contractId_for_network_web,
-  greeting_contract_methods,
-} from "./lib/contract_greeting_const_web";
-export {
-  rhea_contractId_for_network_web,
-  ref_exchange_methods_const,
-} from "./lib/contract_rhea_const_web";
-export {
-  wrap_contractId_for_network_web,
-  wrap_near_methods_const,
-} from "./lib/contract_near_wrap_const_web";
-export { near_tld_for_network_web } from "./lib/near_tld_const_web";
 // ===========================================
 // copyright 2026 by sleet.near
