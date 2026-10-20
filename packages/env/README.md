@@ -14,8 +14,9 @@ bun add @near-kit-tool-box/env
 ```js
 import {
   near_kit_env,
-  MY_ENV_NEAR_accountId,
-  MY_ENV_NEAR_privateKey,
+  NEAR_NETWORK,
+  NEAR_ACCOUNT_ID,
+  NEAR_PRIVATE_KEY,
 } from "@near-kit-tool-box/env";
 ```
 
@@ -24,20 +25,17 @@ import {
 Create a `.env` file:
 
 ```env
-# networkId
-export env_networkId=testnet
-# export env_networkId=mainnet
+export NEAR_NETWORK=testnet
+# export NEAR_NETWORK=mainnet
 
-# auth
-export env_accountId=your-account.near
-export env_publicKey=ed25519:your-public-key
-export env_privateKey=ed25519:your-private-key
+export NEAR_ACCOUNT_ID=your-account.near
+export NEAR_PRIVATE_KEY=ed25519:your-private-key
 ```
 
 ## Features
 
-- Environment variable configuration
+- Environment variable configuration (env var names match the rust crate's `NEAR_*` convention)
 - Backend/script-friendly NEAR KIT client
-- Contract constants for env environment
+- `NEAR_NETWORK` is constrained to `"mainnet"` or `"testnet"` — for custom RPC URLs, build a `Near` instance directly
 
 copyright 2026 by sleet.near

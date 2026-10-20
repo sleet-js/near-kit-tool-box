@@ -5,28 +5,23 @@ import type { PrivateKey } from "near-kit";
 import * as dotenv from "dotenv";
 dotenv.config();
 // ==============================================
-// MY_ENV
-export const MY_ENV_NEAR_networkId:
-  | "mainnet"
-  | "testnet"
-  | "localnet"
-  | "betanet"
-  | { rpcUrl: string; networkId: string } =
-  (process.env.env_networkId as
-    | "mainnet"
-    | "testnet"
-    | "localnet"
-    | "betanet") || "testnet";
-export const MY_ENV_NEAR_accountId: string = process.env.env_accountId!;
-export const MY_ENV_NEAR_publicKey = process.env.env_publicKey;
-// Handle private key format (with or without ed25519: prefix)
-export const MY_ENV_NEAR_privateKey: PrivateKey | undefined = process.env
-  .env_privateKey as PrivateKey | undefined;
+// NETWORK_ID values are exactly `mainnet` or `testnet`. To target a
+// custom RPC URL, build a `Near` instance yourself with
+// `new Near({ rpcUrl, ... })` instead of using `near_kit_env`.
+export const NEAR_NETWORK: "mainnet" | "testnet" =
+  (process.env.NEAR_NETWORK as "mainnet" | "testnet") || "testnet";
+
+export const NEAR_ACCOUNT_ID: string = process.env.NEAR_ACCOUNT_ID ?? "";
+
+export const NEAR_PRIVATE_KEY: PrivateKey | undefined =
+  process.env.NEAR_PRIVATE_KEY as PrivateKey | undefined;
+
 // ==============================================
 // Initialize for backend/scripts
 export const near_kit_env = new Near({
-  network: MY_ENV_NEAR_networkId,
-  privateKey: MY_ENV_NEAR_privateKey,
-  defaultSignerId: MY_ENV_NEAR_accountId,
+  network: NEAR_NETWORK,
+  privateKey: NEAR_PRIVATE_KEY,
+  defaultSignerId: NEAR_ACCOUNT_ID,
 });
 // ==============================================
+// copyright 2026 by sleet.near

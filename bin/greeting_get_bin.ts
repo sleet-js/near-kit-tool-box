@@ -1,5 +1,5 @@
 import {
-  MY_ENV_NEAR_networkId,
+  NEAR_NETWORK,
   near_kit_env,
 } from "../packages/env/src/index.js";
 import {
@@ -7,9 +7,7 @@ import {
   greeting_get_greeting_fun_json,
 } from "../packages/fun/src/index.js";
 // ==============================================
-const networkId: "mainnet" | "testnet" =
-  MY_ENV_NEAR_networkId === "mainnet" ? "mainnet" : "testnet";
-const greeting_contractId = greeting_contractid(networkId);
+const greeting_contractId = greeting_contractid(NEAR_NETWORK);
 // ==============================================
 console.log(
   await greeting_get_greeting_fun_json(near_kit_env, greeting_contractId),

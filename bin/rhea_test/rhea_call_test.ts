@@ -1,5 +1,5 @@
 import {
-  MY_ENV_NEAR_networkId,
+  NEAR_NETWORK,
   near_kit_env,
 } from "../../packages/env/src/index.js";
 import type {
@@ -22,10 +22,8 @@ import {
 // 4. withdraw ❌
 // 5. un wrap ❌
 // ==============================================
-const networkId: "mainnet" | "testnet" =
-  MY_ENV_NEAR_networkId === "mainnet" ? "mainnet" : "testnet";
-const rhea_contractId = rhea_ammv2_contractid(networkId);
-const ft_contractId = wrap_near_contractid(networkId);
+const rhea_contractId = rhea_ammv2_contractid(NEAR_NETWORK);
+const ft_contractId = wrap_near_contractid(NEAR_NETWORK);
 const amount_near: AmountInput = "2 NEAR";
 const receiver_id = rhea_contractId;
 const msg = "";

@@ -1,5 +1,5 @@
 import {
-  MY_ENV_NEAR_networkId,
+  NEAR_NETWORK,
   near_kit_env,
 } from "../packages/env/src/index.js";
 import {
@@ -8,9 +8,7 @@ import {
   rhea_ammv2_contractid,
 } from "../packages/fun/src/index.js";
 // ==============================================
-const networkId: "mainnet" | "testnet" =
-  MY_ENV_NEAR_networkId === "mainnet" ? "mainnet" : "testnet";
-const rhea_contractId = rhea_ammv2_contractid(networkId);
+const rhea_contractId = rhea_ammv2_contractid(NEAR_NETWORK);
 const signerId = "sleet.testnet";
 const publicKeyLimited = "ed25519:9vnVSMT1hv2Q1vuZzbjStFieqGbTrwqe4KcvfqYAkb5T";
 // ==============================================
