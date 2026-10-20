@@ -1,5 +1,5 @@
 import { NearConnector } from "@hot-labs/near-connect";
-import { Near, fromHotConnect } from "near-kit";
+import { Near, fromNearConnect } from "near-kit";
 // ==============================================
 export const NETWORK_STORAGE_KEY = "network_id"; // used for network toggle
 // ==============================================
@@ -27,11 +27,11 @@ const near_connect_testnet = new NearConnector({
 // Type assertion needed for near-kit 0.12.0+ compatibility
 const near_kit_mainnet = new Near({
   network: "mainnet",
-  wallet: fromHotConnect(near_connect_mainnet as any),
+  wallet: fromNearConnect(near_connect_mainnet as any),
 });
 const near_kit_testnet = new Near({
   network: "testnet",
-  wallet: fromHotConnect(near_connect_testnet as any),
+  wallet: fromNearConnect(near_connect_testnet as any),
 });
 // ==============================================
 export function getStoredNetworkId(): "mainnet" | "testnet" {
