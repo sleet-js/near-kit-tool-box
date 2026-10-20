@@ -8,7 +8,7 @@ general
 - [near.md](./near.md) — TLD registrar + NEAR-level actions
 - [ft.md](./ft.md) — generic NEP-141 / NEP-145 helpers
 
-rhea
+rhea - ref was renamed rhea
 - [v2.ref-finance.near.md](./v2.ref-finance.near.md) — rhea_ammv2
 
 pumpopoly
