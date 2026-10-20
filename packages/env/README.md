@@ -34,7 +34,7 @@ export NEAR_PRIVATE_KEY=ed25519:your-private-key
 
 ## Features
 
-- Environment variable configuration (env var names match the rust crate's `NEAR_*` convention)
+- Environment variable configuration (upper-snake `NEAR_*` env vars)
 - Backend/script-friendly NEAR KIT client
 - `NEAR_NETWORK` is constrained to `"mainnet"` or `"testnet"` — for custom RPC URLs, build a `Near` instance directly
 
