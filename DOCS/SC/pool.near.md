@@ -2,32 +2,32 @@
 
 The standard NEAR validator staking-pool child contracts. There is no
 single canonical id on either network — staking pools are deployed
-**per-validator** by the `pool.near` factory (v2 pools) and by the
-legacy `poolv1.near` factory (v1 pools).
+**per-validator**, and the fun helpers take the concrete pool account
+id as a parameter.
 
-Pass the specific pool account id into `pool_*_fun_json` helpers in
-this package. The factory contract ids (if you need them) live at:
-
-- `pool.near` (mainnet) / `pool.testnet` (testnet) — v2 factory
-- `poolv1.near` (mainnet) / `poolv1.testnet` (testnet) — v1 factory
-
-To call a method on a specific pool, replace `<pool_account>` with
-the validator's pool account id (`<validator>.pool.near` on mainnet,
-`<validator>.pool.testnet` on testnet, etc.):
+Pass the specific pool account id into the `pool_*_fun_json` helpers.
+On mainnet the validator's pool account id is typically
+`<validator>.pool.near` (deployed by the v2 factory) or
+`<validator>.poolv1.near` (deployed by the legacy v1 factory).
 
 ```sh
 # near cli - get a list of methods
+# replace <pool_account> with the specific pool's account id
 near contract inspect <pool_account> network-config mainnet now
 ```
 
-#### KNOWN POOLS
+#### KNOWN POOLS (v2 hash)
 
-| pool account id | factory | network |
-| --- | --- | --- |
-| `everything.pool.near` | pool.near (v2) | mainnet |
+| pool account id |
+| --- |
+| `everything.pool.near` |
+| `shitzu.pool.near` |
+| `shadowcorp.pool.near` |
+| `intear.pool.near` |
 
-The TS fun package ships no pooled-resolver helpers — pass the
-concrete pool account id into each `pool_*_fun_json` call.
+> Aurorapool (`<validator>.pool.near` for aurora) runs a **patched**
+> v2 pool. Method surface matches but **always verify code_hash at the
+> call site** before assuming parity.
 
 #### FILES
 

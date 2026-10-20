@@ -2,8 +2,8 @@
 // wrap_near_deposit_fun_json
 //
 // Call: `near_deposit` on the wrap.near contract. Wraps `amount`
-// NEAR into wNEAR (NEP-141) at the wrap.near contract. The wrap.near
-// contract id (`wrap.testnet` / `wrap.near`) is resolved by the caller.
+// NEAR into wNEAR (NEP-141) at the supplied wrap_near contract id.
+// `wrap_contractId` should be `wrap.testnet` or `wrap.near`.
 import type { FinalExecutionOutcome, Near } from "near-kit";
 import { wrap_near_methods_const } from "../../lib/methods/methods_wrap_near";
 import type { AmountInput } from "../../types/AmountInput";

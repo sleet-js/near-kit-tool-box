@@ -5,7 +5,7 @@ import type { CONTRACT_ID_CONST_TYPE, NETWORK_ID } from "./contract_id_const_typ
 
 // =================================================
 export const PUMPOPOLY_WORLD_CONTRACT_ID_CONST: CONTRACT_ID_CONST_TYPE = {
-  testnet: "world.pumpopoly.testnet",
+  testnet: "world11.ballstone.testnet",
   mainnet: "world.pumpopoly.near",
 };
 
