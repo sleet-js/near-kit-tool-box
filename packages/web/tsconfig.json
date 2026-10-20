@@ -9,6 +9,9 @@
 
     "rootDir": "./src",
     "outDir": "./dist",
+    "composite": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./.tsbuildinfo",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,

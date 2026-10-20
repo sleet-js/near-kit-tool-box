@@ -20,7 +20,8 @@
     "directory": "packages/web"
   },
   "scripts": {
-    "build": "bun run tsc"
+    "build": "rm -f .tsbuildinfo && bun run tsc --build --force",
+    "clean": "bun run tsc --build --clean && rm -rf dist .tsbuildinfo"
   },
   "files": [
     "dist/**/*",
