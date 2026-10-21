@@ -34,10 +34,15 @@ const near_kit_testnet = new Near({
   wallet: fromNearConnect(near_connect_testnet as any),
 });
 // ==============================================
-export function getStoredNetworkId(): "mainnet" | "testnet" {
-  const raw = localStorage.getItem(NETWORK_STORAGE_KEY);
+// Single source of truth for reading/validating the stored network id.
+// Any value that is not exactly "testnet" (after trim + lowercase) is
+// treated as "mainnet", so every caller agrees on the current network.
+function normalizeNetworkId(raw: string | null): "mainnet" | "testnet" {
   const value = (raw || "mainnet").trim().toLowerCase();
   return value === "testnet" ? "testnet" : "mainnet";
+}
+export function getStoredNetworkId(): "mainnet" | "testnet" {
+  return normalizeNetworkId(localStorage.getItem(NETWORK_STORAGE_KEY));
 }
 // ==============================================
 // ==============================================

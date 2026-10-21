@@ -1,21 +1,20 @@
-import { NETWORK_STORAGE_KEY } from "./new-hot";
+import { NETWORK_STORAGE_KEY, getStoredNetworkId } from "./new-hot";
 // ===========================================
-let NETWORK_ID: string;
-//
+// Reads the current network via `getStoredNetworkId()`, which normalizes
+// the stored value. Using the raw localStorage value here previously let
+// a dirty value (e.g. "MainNet") normalize to "mainnet" while the toggle
+// compared it against the literal "mainnet", so the toggle was a no-op
+// and the UI could show one network while signing for another.
+// ===========================================
 export function toggleNetwork() {
-  const savedNetwork = localStorage.getItem(NETWORK_STORAGE_KEY) || "mainnet";
-  NETWORK_ID = savedNetwork;
-  const newNetwork = NETWORK_ID === "mainnet" ? "testnet" : "mainnet";
-  NETWORK_ID = newNetwork;
+  const newNetwork = getStoredNetworkId() === "mainnet" ? "testnet" : "mainnet";
   localStorage.setItem(NETWORK_STORAGE_KEY, newNetwork);
   console.info(newNetwork);
 }
 //
 export function setNetwork_mainnet() {
-  let NETWORK_ID = "mainnet";
-  localStorage.setItem(NETWORK_STORAGE_KEY, NETWORK_ID);
+  localStorage.setItem(NETWORK_STORAGE_KEY, "mainnet");
 }
 export function setNetwork_testnet() {
-  let NETWORK_ID = "testnet";
-  localStorage.setItem(NETWORK_STORAGE_KEY, NETWORK_ID);
+  localStorage.setItem(NETWORK_STORAGE_KEY, "testnet");
 }
