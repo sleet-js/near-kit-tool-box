@@ -6,7 +6,7 @@ run
 
 ```sh
 cp .env.example .env
-source .env
+# no `source` needed — dotenv loads .env from the cwd automatically
 # bun run
 bun run bin/greeting_get_bin.ts
 bun run bin/greeting_set_bin.ts

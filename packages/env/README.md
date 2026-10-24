@@ -25,14 +25,15 @@ import {
 Create a `.env` file:
 
 ```env
-export NEAR_KIT_NETWORK=testnet
-# export NEAR_KIT_NETWORK=mainnet
+NEAR_KIT_NETWORK=testnet
+# NEAR_KIT_NETWORK=mainnet
 
-export NEAR_KIT_ACCOUNT_ID=your-account.near
-export NEAR_KIT_PRIVATE_KEY=ed25519:your-private-key
+NEAR_KIT_ACCOUNT_ID=your-account.near
+NEAR_KIT_PRIVATE_KEY=ed25519:your-private-key
 ```
 
-The `export` prefix is optional — dotenv parses both forms.
+No `export` prefix needed — dotenv loads `.env` from the current working
+directory automatically. (An `export` prefix is also parsed, if you prefer it.)
 
 ## Features
 
