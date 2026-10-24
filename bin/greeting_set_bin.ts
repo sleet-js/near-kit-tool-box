@@ -1,4 +1,4 @@
-import { NEAR_NETWORK, near_kit_env } from "../packages/env/src/index.js";
+import { NEAR_KIT_NETWORK, near_kit_env } from "../packages/env/src/index.js";
 import {
   greeting_contractid,
   greeting_set_greeting_fun_json,
@@ -6,7 +6,7 @@ import {
 // ==============================================
 const greeting = "Hello from near kit bin";
 // ==============================================
-const greeting_contractId = greeting_contractid(NEAR_NETWORK);
+const greeting_contractId = greeting_contractid(NEAR_KIT_NETWORK);
 // ==============================================
 console.log(
   await greeting_set_greeting_fun_json(

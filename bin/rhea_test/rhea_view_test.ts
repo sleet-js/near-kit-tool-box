@@ -1,4 +1,4 @@
-import { NEAR_NETWORK, near_kit_env } from "../../packages/env/src/index.js";
+import { NEAR_KIT_NETWORK, near_kit_env } from "../../packages/env/src/index.js";
 import {
   rhea_ammv2_contractid,
   rhea_ammv2_get_deposits_fun_json,
@@ -9,7 +9,7 @@ import {
   rhea_ammv2_storage_balance_of_fun_json,
 } from "../../packages/fun/src/index.js";
 // ==============================================
-const rhea_contractId = rhea_ammv2_contractid(NEAR_NETWORK);
+const rhea_contractId = rhea_ammv2_contractid(NEAR_KIT_NETWORK);
 // ==============================================
 console.log("==============================================");
 console.log(

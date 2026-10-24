@@ -41,13 +41,13 @@ Backend client with environment variable configuration.
 ```js
 import {
   near_kit_env,
-  NEAR_NETWORK,
-  NEAR_ACCOUNT_ID,
-  NEAR_PRIVATE_KEY,
+  NEAR_KIT_NETWORK,
+  NEAR_KIT_ACCOUNT_ID,
+  NEAR_KIT_PRIVATE_KEY,
 } from "@near-kit-tool-box/env";
 
 import { rhea_ammv2_contractid } from "@near-kit-tool-box/fun";
-const id = rhea_ammv2_contractid(NEAR_NETWORK);
+const id = rhea_ammv2_contractid(NEAR_KIT_NETWORK);
 ```
 
 ### @near-kit-tool-box/fun

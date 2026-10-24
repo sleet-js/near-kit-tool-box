@@ -14,9 +14,9 @@ bun add @near-kit-tool-box/env
 ```js
 import {
   near_kit_env,
-  NEAR_NETWORK,
-  NEAR_ACCOUNT_ID,
-  NEAR_PRIVATE_KEY,
+  NEAR_KIT_NETWORK,
+  NEAR_KIT_ACCOUNT_ID,
+  NEAR_KIT_PRIVATE_KEY,
 } from "@near-kit-tool-box/env";
 ```
 
@@ -25,17 +25,20 @@ import {
 Create a `.env` file:
 
 ```env
-export NEAR_NETWORK=testnet
-# export NEAR_NETWORK=mainnet
+export NEAR_KIT_NETWORK=testnet
+# export NEAR_KIT_NETWORK=mainnet
 
-export NEAR_ACCOUNT_ID=your-account.near
-export NEAR_PRIVATE_KEY=ed25519:your-private-key
+export NEAR_KIT_ACCOUNT_ID=your-account.near
+export NEAR_KIT_PRIVATE_KEY=ed25519:your-private-key
 ```
+
+The `export` prefix is optional — dotenv parses both forms.
 
 ## Features
 
-- Environment variable configuration (upper-snake `NEAR_*` env vars)
+- Environment variable configuration (upper-snake `NEAR_KIT_*` env vars)
 - Backend/script-friendly NEAR KIT client
-- `NEAR_NETWORK` is constrained to `"mainnet"` or `"testnet"` — for custom RPC URLs, build a `Near` instance directly
+- `NEAR_KIT_NETWORK` is constrained to `"mainnet"` or `"testnet"` — for custom RPC URLs, build a `Near` instance directly
+- The `NEAR_KIT_` prefix avoids colliding with the generic `NEAR_*` env vars read by the `near-kit` library itself
 
 copyright 2026 by sleet.near
