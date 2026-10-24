@@ -9,11 +9,17 @@ the pumpopoly world monopoly-style game contract
 **CONTRACT ID PER NETWORK**
 
 - MAINNET: world.pumpopoly.near
-- TESTNET: world.pumpopoly.testnet
+- TESTNET: world11.ballstone.testnet
+
+> The testnet deployment lives on a different account than the mainnet
+> one — the testnet world (and its token / nft / bond / orderbook
+> contracts) is deployed under `ballstone.testnet`, not under
+> `pumpopoly.testnet`. See `near-config.js` in the testnet dapp:
+> <https://testnet.pumpopoly.com/>
 
 ```sh
 # near cli - get a list of methods
-near contract inspect world.pumpopoly.testnet network-config testnet now
+near contract inspect world11.ballstone.testnet network-config testnet now
 near contract inspect world.pumpopoly.near network-config mainnet now
 ```
 
