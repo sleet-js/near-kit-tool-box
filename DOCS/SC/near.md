@@ -25,7 +25,7 @@ near contract inspect near    network-config mainnet now
 - `packages/fun/src/lib/const_id/near_tld_contract_id_const.ts` (resolver: `near_tld_contractid(network)`)
 - `packages/fun/src/fun/near/near_create_account_fun_json.ts`
 - `packages/fun/src/fun/near/near_add_key_fun_json.ts`, `packages/fun/src/fun/near/near_delete_key_fun_json.ts`, `packages/fun/src/fun/near/near_delete_account_fun_json.ts`
-- `bin/create_account_bin.ts`, `bin/add_delete_key_bin.ts`, `bin/add_delete_limited_key_bin.ts`, `bin/delete_account_bin.ts`
+- `bin/near/near_create_account.ts`, `bin/near/near_add_key.ts`, `bin/near/near_delete_key.ts`, `bin/near/near_delete_account.ts`
 
 ==========================
 <br/>

@@ -2,7 +2,7 @@
 
 files/folders
 
-- bin/ - runable ts files for testing the fun package
+- bin/ - runnable ts files for testing the fun package (one bin per helper, see bin/README.md)
 - scripts/
 - DOCS/
 

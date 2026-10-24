@@ -234,13 +234,20 @@ and safe to run as part of `bun run publish:all`.
 
 ## Testing
 
-Test scripts are in `bin/`:
+Runnable scripts are in `bin/` — one per `fun` helper, grouped by
+contract family. Every bin takes CLI flags; see `bin/README.md`.
 
 ```bash
-# Run test scripts
-bun run bin/greeting_get_bin.ts
-bun run bin/greeting_set_bin.ts
-bun run bin/rhea_test/rhea_call_test.ts
+# View bins need no signer
+bun run bin/hello/hello_get.ts
+bun run bin/ft/ft_metadata.ts --contract-id shit-237.factory.v10.meme-cooking.testnet
+bun run bin/rhea_ammv2/rhea_get_pools.ts --from-index 0 --limit 10
+
+# Call bins need a signer (see .env.example)
+bun run bin/hello/hello_set.ts --greeting "Hello from near kit"
+
+# Smoke test every view bin
+./scripts/bin-smoke.sh
 ```
 
 ---

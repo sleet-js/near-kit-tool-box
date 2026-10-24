@@ -23,7 +23,7 @@ near contract inspect token.testnet network-config testnet now
 - `packages/fun/src/lib/args/ft_args.ts`
 - `packages/fun/src/types/ft_metadata_get_response_type.ts`
 - `packages/fun/src/fun/ft/ft_balance_of_fun_json.ts`, `packages/fun/src/fun/ft/ft_total_supply_fun_json.ts`, `packages/fun/src/fun/ft/ft_metadata_fun_json.ts`, `packages/fun/src/fun/ft/ft_transfer_fun_json.ts`, `packages/fun/src/fun/ft/ft_transfer_call_fun_json.ts`, `packages/fun/src/fun/ft/ft_storage_deposit_fun_json.ts`
-- `bin/ft_test/ft_balance_of_test.ts`, `bin/ft_test/ft_metadata_test.ts`
+- `bin/ft/ft_balance_of.ts`, `bin/ft/ft_total_supply.ts`, `bin/ft/ft_metadata.ts`, `bin/ft/ft_transfer.ts`, `bin/ft/ft_transfer_call.ts`, `bin/ft/ft_storage_deposit.ts`
 
 ==========================
 <br/>
