@@ -237,17 +237,21 @@ and safe to run as part of `bun run publish:all`.
 Runnable scripts are in `bin/` — one per `fun` helper, grouped by
 contract family. Every bin takes CLI flags; see `bin/README.md`.
 
+Run them individually, as needed. View bins are read-only and need no
+signer. Call bins submit real transactions — run those only when you
+intend to.
+
 ```bash
 # View bins need no signer
 bun run bin/hello/hello_get.ts
 bun run bin/ft/ft_metadata.ts --contract-id shit-237.factory.v10.meme-cooking.testnet
 bun run bin/rhea_ammv2/rhea_get_pools.ts --from-index 0 --limit 10
 
-# Call bins need a signer (see .env.example)
+# Call bins need a signer (see .env.example) and send real transactions
 bun run bin/hello/hello_set.ts --greeting "Hello from near kit"
 
-# Smoke test every view bin
-./scripts/bin-smoke.sh
+# Type-check the bins (no network access)
+bun run typecheck:bin
 ```
 
 ---

@@ -203,17 +203,6 @@ bun run bin/pumpopoly_world/pumpopoly_world_elite_move.ts
 
 ---
 
-## smoke test
-
-`scripts/bin-smoke.sh` runs every view bin and reports PASS / FAIL.
-View bins need no signer.
-
-```sh
-./scripts/bin-smoke.sh
-```
-
----
-
 ## layout
 
 ```
